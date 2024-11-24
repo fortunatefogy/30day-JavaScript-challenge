@@ -1,0 +1,131 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    border: none;
+    outline: none;
+
+}
+
+body{
+    height: 100vh;
+    background: linear-gradient(to left, #18A5A7,#5ab766);
+}
+
+.container{
+    background-color: aliceblue;
+    width: 500px;
+    padding: 50px 30px;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    animation: slide-in 0.5s ease-in-out;
+    
+}
+
+@keyframes slide-in {
+    0% {
+        transform: translate(-50%, -70%);
+    }
+    100% {
+        transform: translate(-50%, -50%);
+        opacity: 1;
+    }
+}
+
+.colors{
+    width: 100%;
+    display: flex;
+    background-color: transparent;
+    justify-content: space-around;
+}
+
+input[type="color"]{
+    appearance: none;
+    background-color: transparent;
+    width: 120px;
+    height: 75px;
+    border: none;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+}
+input[type="color"]::-webkit-color-swatch{
+    border-radius: 5px;
+    border: none;
+}
+
+.buttons{
+    width: 100%;
+    display: flex;
+    justify-content: space-between;
+    margin:30px 0;
+}
+
+.buttons button{
+    height: 35px;
+    width: 35px;
+    background-color: transparent;
+    border: 2px solid #d5dfdc;
+    color: #d5dfdc;
+    border-radius: 5px;
+    cursor: pointer;
+}
+
+.rotate-icon i{
+    transform: rotate(45deg);
+}
+
+.buttons .active{
+    border: none;
+    background-color: black;
+    color: aliceblue;
+
+}
+
+#generate{
+    display: block;
+    background-color: black;
+    color: aliceblue;
+    font-size: 16px;
+    padding: 12px 70px;
+    border-radius: 5px;
+    margin: 0 auto 30px auto;
+    cursor: pointer;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.2);
+    transition: background-color 0.3s ease;
+
+}
+
+#generate:hover{
+    background-color: #404142;
+    color: aliceblue;
+
+}
+
+.output{
+    background-color: #fbfcfc;
+}
+
+#code{
+    width: 100%;
+    resize:  none;
+    color: #404142;
+    padding: 10px 20px;
+    background-color: transparent;
+}
+
+#copy{
+    font-size: 14px;
+    background-color: black;
+    color: #fbfcfc;
+    position: relative;
+    left: 85%;
+    bottom: 10px;
+    border-radius: 3px;
+    padding: 5px;
+    cursor: pointer;
+
+}
