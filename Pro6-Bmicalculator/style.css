@@ -1,0 +1,100 @@
+body{
+    background-color: chartreuse;
+    font-family: sans-serif;
+    color: black;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    margin: 0;
+}
+
+.container{
+   
+    background-color: aliceblue;
+    padding: 20px;
+    border-radius: 15px;
+    box-shadow: 0 0 15px rgba(0, 0, 0, .7);
+    width: 300px;
+    height: 600px;
+
+    
+}
+
+h1{
+    margin-bottom: 30px;
+}
+
+.input-group{
+    color: black;
+    /* text-decoration: underline; */
+    text-shadow: 0 0 19px rgba(83, 255, 15, 0.6);
+
+
+}
+
+label{
+    font-size: 18px;
+
+}
+
+input[type="range"]{
+    width: 100%;
+}
+
+input[type="number"]{
+    background: linear-gradient(to right,#c1f5a7,#55f229);
+
+    border-radius: 10px;
+    /* outline: 1px;
+     */
+     border: none;
+    padding: 3px;
+}
+
+input[type="range"]{
+    margin-top: 3px;
+
+}
+
+.radio-group label{
+    margin-top: 5px;
+
+
+}
+
+.input-group span{
+    font-size: 18px;
+    font-weight: 500;
+}
+
+button{
+    background-color: #9ff089;
+    border-radius: 5px;
+    border: none;
+    padding: 10px;
+    font-weight: bold;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+
+}
+
+button:hover{
+    background-color: #55f229;
+    color: darkgreen;
+}
+
+.output{
+    margin-top: 20px;
+
+}
+
+#bmi-result{
+    font-size: 1.3em;
+    font-style: italic;
+}
+
+#bmi-category{
+    font-size: 1.3em;
+    font-style: italic;
+}
