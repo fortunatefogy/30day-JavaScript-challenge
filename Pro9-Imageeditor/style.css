@@ -1,0 +1,173 @@
+*{
+    padding: 0;
+    margin: 0;
+    box-sizing: border-box;
+    font-family: sans-serif;
+}
+
+body{
+    background-color: black;
+    color: white;
+}
+
+.wrapper{
+    width: 85vw;
+    min-height: 50vmin;
+    padding: 50px 30px;
+    background-color: white;
+    color: black;
+    position: absolute;
+    transform: translate(-50%,-50%);
+    top: 50%;
+    left: 50%;
+    border-radius: 10px;
+    box-shadow: 0 20px 40px rgba(245, 243, 243, 0.289);
+    display: grid;
+    grid-template-columns: 5fr 7fr;
+}
+
+.editor{
+    min-height: 35vmin;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-around;
+    gap: 20px;
+
+}
+
+.editor label{
+    font-size: 1.2rem;
+    font-weight: 200;
+}
+
+.editor input[type="range"]{
+    display: block;
+    width: 100%;
+    position: relative;
+    margin-top: 5px;
+    margin-bottom: 10px;
+    appearance: none;
+    /* background-color: bla; */
+
+
+}
+
+
+.editor input[type="range"]::-webkit-slider-runnable-track{
+    width: 100%;
+    height: 8px;
+    border-radius: 5px;
+    background-color: #d3d3d3;
+    outline: none;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+    appearance: none
+}
+
+
+.editor input[type="range"]::-webkit-slider-thumb{
+    width: 18px;
+    height: 18px;
+    border-radius: 50%;
+    appearance: none;
+    cursor: pointer;
+    margin-top: -5px;
+    background-color: black;
+    background: black;
+
+}
+.flip-button{
+    display: flex;
+    flex-direction: column;
+    margin-top: 10px;
+
+}
+
+.flip-button .flip-option{
+    margin-top: 10px;
+
+}
+
+.flip-option input[type="radio"]{
+    display: none;
+
+}
+
+.flip-option input[type="radio"] + label{
+    position: relative;
+    padding-left: 30px;
+    cursor: pointer;
+
+
+}
+
+
+.flip-option input[type="radio"] + label::before {
+    content:'';
+    position: absolute;
+    left: 0;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 20px;
+    height: 18px;
+    border-radius: 50%;
+    background-color: rgb(82, 198, 240);
+    transition: background-color 0.3s ease;
+    cursor: pointer;
+}
+
+
+
+
+.flip-option input[type="radio"]:checked + label::before {
+    background-color: #000000;
+
+
+}
+
+.result{
+    display: flex;
+    position: relative;
+    flex-direction: column;
+    justify-content: center;
+    gap: 20px;
+
+}
+
+.result img{
+    display: block;
+    position: relative;
+    max-width: calc(100% -4vmin);
+    margin: auto;
+}
+
+.image-container{
+    display: none;
+
+}
+
+input[type="file"]{
+    display: none;
+}
+
+.result label, .result #download-button{
+
+    display: block;
+    position: relative;
+    margin: 0 auto;
+    width: 220px;
+    background: linear-gradient(#0aabdc,#555eaa);
+    border: none;
+    border-radius: 5px;
+    padding: 10px;
+    cursor: pointer;
+    color: aliceblue;
+    /* padding-left: 20px; */
+
+
+}
+
+.result label{
+    /* padding: 50px 20px; */
+    text-align: center;
+}
