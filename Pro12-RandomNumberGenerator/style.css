@@ -1,0 +1,48 @@
+body{
+    margin: 0;
+    padding: 0;
+    font-family: sans-serif;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    min-height: 100vh;
+    background-color: #1E90FF;
+}
+
+.container{
+    text-align: center;
+}
+
+.number-container{
+    font-size: 3rem;
+    margin-bottom: 1rem;
+    animation: fadeIn 1s ease-in-out;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;
+        transform: translateY(-20px);
+    }
+    to{
+        opacity: 1;
+        transform: translateY(0px);
+    }
+
+}
+
+button{
+    background-color: aliceblue;
+    color: black;
+    cursor: pointer;
+    border-radius: 10px;
+    border: none;
+    font-size: larger;
+    padding: 1rem 2rem;
+    transition: cubic-bezier(0.075, 0.82, 0.165, 1);
+}
+
+button:hover{
+    background-color: rgb(123, 240, 253);
+    color: rgb(13, 83, 203);
+}
