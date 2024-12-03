@@ -1,0 +1,167 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.1/css/all.min.css" integrity="sha512-5Hs3dF2AEPkpNAR7UiOHba+lRSJNeM2ECkwxUIxC1Q/FLycGTbNapWXB4tP889k5T5Ju8fs4b1P5z/iB4nMfSQ==" crossorigin="anonymous" referrerpolicy="no-referrer" />
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Star Rating</title>
+    <style>
+        html, body {
+            font-family: fantasy;
+            display: grid;
+            height: 100%;
+            place-items: center;
+            text-align: center;
+            background-color: aliceblue;
+            margin: 0;
+        }
+
+        .wrapper {
+            position: relative;
+            width: 400px;
+            background-color: black;
+            padding: 50px 90px;
+            border-radius: 10px;
+            box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+            margin: 20px;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            flex-direction: column;
+        }
+
+        .text {
+            font-size: 25px;
+            color: aliceblue;
+            font-weight: 500;
+        }
+
+        .edit, .btn button, .exit {
+            display: inline-block;
+            background-color: aquamarine;
+            color: rgb(0, 0, 0);
+            padding: 10px 20px;
+            cursor: pointer;
+            border: none;
+            border-radius: 5px;
+            margin-top: 10px;
+            font-size: 16px;
+        }
+
+        .post {
+            display: none;
+        }
+
+        .star-widget input {
+            display: none;
+        }
+
+        .star-widget label {
+            font-size: 40px;
+            color: gray;
+            padding: 10px;
+            transition: all 0.2s ease;
+            cursor: pointer;
+        }
+
+        .star-widget label:hover,
+        .star-widget label:hover ~ label {
+            color: #f1c40f;
+        }
+
+        input:checked ~ label {
+            color: #f1c40f;
+        }
+
+        #rate-5:checked ~ form header::before {
+            content: 'I hate it';
+        }
+
+        #rate-4:checked ~ form header::before {
+            content: 'I don\'t like it';
+        }
+
+        #rate-3:checked ~ form header::before {
+            content: 'It is awesome';
+        }
+
+        #rate-2:checked ~ form header::before {
+            content: 'I like it';
+        }
+
+        #rate-1:checked ~ form header::before {
+            content: 'I love it';
+        }
+
+        .wrapper form {
+            display: none;
+        }
+
+        input:checked ~ form {
+            display: block;
+        }
+
+        form header {
+            width: 100%;
+            font-size: 25px;
+            color: #f1c40f;
+            font-weight: 500;
+            margin: 5px 0 20px 0;
+            position: relative;
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            transition: all 0.2s ease;
+        }
+
+        form .btn button {
+            padding: 10px 40px;
+            text-transform: uppercase;
+            cursor: pointer;
+        }
+    </style>
+</head>
+<body>
+    <div class="wrapper">
+        <div class="post">
+            <div class="text">Thanks for rating us</div>
+            <button class="exit">Exit</button>
+        </div>
+        <div class="star-widget">
+            <input type="radio" name="rate" id="rate-1">
+            <label for="rate-1" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-2">
+            <label for="rate-2" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-3">
+            <label for="rate-3" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-4">
+            <label for="rate-4" class="fas fa-star"></label>
+            <input type="radio" name="rate" id="rate-5">
+            <label for="rate-5" class="fas fa-star"></label>
+            <form action="#">
+                <header></header>
+                <div class="btn">
+                    <button type="button">Rate</button>
+                </div>
+            </form>
+        </div>
+    </div>
+
+    <script>
+        const btn = document.querySelector("form .btn button");
+        const post = document.querySelector(".post");
+        const widget = document.querySelector(".star-widget");
+        const exitBtn = document.querySelector(".exit");
+
+        btn.onclick = () => {
+            widget.style.display = "none";
+            post.style.display = "block";
+        };
+
+        exitBtn.onclick = () => {
+            widget.style.display = "flex";
+            post.style.display = "none";
+        };
+    </script>
+</body>
+</html>
