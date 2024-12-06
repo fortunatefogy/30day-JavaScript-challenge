@@ -1,0 +1,92 @@
+body{
+    font-family: sans-serif;
+    margin: 0;
+    padding: 0;
+    background: linear-gradient(-45deg, #ee7752, #e73c7e, #23a6d5, #23d5ab);
+    background-size: 400% 400%;
+    animation: gradientBackground 15s ease infinite;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+}
+
+@keyframes gradientBackground {
+    0% {
+        background-position: 0% 50%;
+    }
+    50% {
+        background-position: 100% 50%;
+    }
+    100% {  
+        background-position: 0% 50%;
+    }
+
+}
+
+.card{
+    
+    width: 450px;
+    height: 350px;
+    background-color: white;
+    border-radius: 20px;
+    box-shadow: 0 20px 40px rgba(0, 0, 0, 0.7);
+    overflow: hidden;
+    animation: fadeIn 1s ease, pulse 2s infinite;
+    position: relative;
+}
+
+@keyframes fadeIn {
+    from{
+        opacity: 0;}
+    to{
+        opacity: 1;
+    }
+
+}
+
+@keyframes pulse {
+    0% {
+        transform: scale(1);
+    }
+    50% {    
+        transform: scale(1.05);
+    }
+    100% {  
+        transform: scale(1);
+    }
+
+}
+
+.container{
+    padding: 20px;
+}
+
+h1{
+    font-size: 47px;
+    font-weight: 600;
+    color: white;
+    text-transform: uppercase;
+    background-color: purple;
+    padding: 10px 0px 10px 20px;
+    margin-bottom: 5px;
+    border-radius: 5px;
+    display: inline-block;
+    animation: pulse 2s infinite;
+}
+
+#weekday{
+    padding-left: 20px;
+    font-size: 80px;
+    color: rgb(149, 176, 250);
+    font-weight: 800;
+    animation: pulse 2s infinite;
+}
+
+#phrase{
+    font-size: 30px;
+    padding: 20px;
+    color: rgb(144, 187, 236);
+    font-weight: 800;
+    animation: pulse 2s infinite;
+}
